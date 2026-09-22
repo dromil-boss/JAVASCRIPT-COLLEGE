@@ -6,7 +6,9 @@ const server = http.createServer((req, res) => {
         res.end("Get Request");
     } else if (req.method === "POST" && req.url === "/") {
         res.end("POST Request");
-    }
+    } else if (req.method === "PATCH" && req.url === "/") {
+        res.end("PATCH Request");
+    } 
 });
 
 server.listen(3000, () => {
